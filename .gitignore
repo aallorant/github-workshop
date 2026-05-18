@@ -1,0 +1,50 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Windows ---
+Thumbs.db
+Desktop.ini
+
+# --- Editors ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- R ---
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# --- Stata ---
+*.smcl
+
+# --- LaTeX ---
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# --- Quarto ---
+/.quarto/
+_freeze/
+
+# --- Data (uncomment if you keep raw/sensitive data in the repo folder) ---
+# data/
+# *.csv
+# *.xlsx
+# *.dta
+# *.sas7bdat
+
+# --- Outputs (some repos prefer to gitignore these, others commit them) ---
+# output/

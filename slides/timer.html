@@ -1,0 +1,44 @@
+<div id="workshop-timer" title="Click to reset · workshop length: 90:00">
+  <span id="timer-elapsed">00:00</span><span id="timer-target"> / 90:00</span>
+</div>
+
+<script>
+(function() {
+  var WORKSHOP_MIN = 90;
+  var start = Date.now();
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function update() {
+    var s = Math.floor((Date.now() - start) / 1000);
+    var m = Math.floor(s / 60);
+    var sec = s % 60;
+    var el = document.getElementById('timer-elapsed');
+    if (!el) return;
+    el.textContent = pad(m) + ':' + pad(sec);
+
+    var t = document.getElementById('workshop-timer');
+    if (!t) return;
+    t.classList.remove('amber', 'red');
+    if (m >= WORKSHOP_MIN)       t.classList.add('red');
+    else if (m >= WORKSHOP_MIN - 15) t.classList.add('amber');
+  }
+
+  function bind() {
+    var t = document.getElementById('workshop-timer');
+    if (!t) return;
+    t.addEventListener('click', function() {
+      start = Date.now();
+      update();
+    });
+  }
+
+  setInterval(update, 1000);
+  update();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();
+</script>

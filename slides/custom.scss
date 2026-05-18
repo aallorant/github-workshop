@@ -1,0 +1,396 @@
+/*-- scss:defaults --*/
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
+$font-family-serif: "Fraunces", "Iowan Old Style", "Apple Garamond", Georgia, serif !default;
+$font-family-monospace: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !default;
+$presentation-heading-font: $font-family-serif !default;
+$presentation-font-size-root: 32px !default;
+
+// Palette
+$cream:        #FBF8F1;
+$cream-deep:   #F2EAD9;
+$ink:          #1F2A36;
+$ink-soft:     #2E3D4F;
+$terracotta:   #E07A5F;
+$terracotta-d: #B8593F;
+$steel:        #3D5A80;
+$sky:          #98C1D9;
+$muted:        #6C7A8A;
+
+$body-bg:   $cream !default;
+$body-color: $ink !default;
+$link-color: $steel !default;
+$selection-bg: rgba($terracotta, 0.35) !default;
+
+$presentation-heading-color: $ink !default;
+$presentation-heading-font-weight: 600 !default;
+
+/*-- scss:rules --*/
+
+// Body
+.reveal {
+  font-family: $font-family-sans-serif;
+  letter-spacing: -0.005em;
+  color: $ink;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.5;
+}
+
+// Headings
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: $font-family-serif;
+  letter-spacing: -0.015em;
+  color: $ink;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.reveal h2 {
+  font-size: 1.7em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid rgba($terracotta, 0.35);
+  display: inline-block;
+}
+
+.reveal h3 {
+  font-size: 1.25em;
+  color: $terracotta-d;
+}
+
+.reveal strong { color: $ink; font-weight: 600; }
+.reveal em     { color: $ink-soft; font-style: italic; }
+
+// Links
+.reveal a {
+  color: $steel;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($steel, 0.35);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.reveal a:hover {
+  color: $terracotta;
+  border-bottom-color: $terracotta;
+}
+
+// Title slide
+#title-slide {
+  text-align: left;
+  background: linear-gradient(135deg, $ink 0%, $ink-soft 100%);
+  color: $cream;
+  padding: 2em 2.5em;
+  border-radius: 0;
+
+  .title {
+    font-family: $font-family-serif;
+    font-size: 2.6em;
+    line-height: 1.1;
+    font-weight: 600;
+    color: $cream;
+    margin-bottom: 0.2em;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-family: $font-family-sans-serif;
+    font-size: 1.15em;
+    color: $sky;
+    font-weight: 400;
+    margin-bottom: 1.6em;
+    letter-spacing: 0.01em;
+  }
+  .quarto-title-author-name,
+  .author {
+    font-family: $font-family-sans-serif;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: $cream;
+    margin-top: 1.2em;
+  }
+  .quarto-title-affiliation,
+  .institute {
+    font-family: $font-family-sans-serif;
+    font-size: 0.75em;
+    color: rgba($cream, 0.7);
+    font-weight: 400;
+  }
+  .date {
+    font-family: $font-family-sans-serif;
+    font-size: 0.75em;
+    color: $terracotta;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 1em;
+  }
+}
+
+#title-slide::before {
+  content: "";
+  position: absolute;
+  left: 2.5em;
+  top: 1.4em;
+  width: 60px;
+  height: 4px;
+  background: $terracotta;
+}
+
+// Section dividers ({.section})
+.reveal section.slide.level1 {
+  background: $ink;
+  color: $cream;
+}
+
+.reveal section.slide.level1 h1 {
+  font-family: $font-family-serif;
+  font-size: 2.4em;
+  font-weight: 600;
+  color: $cream;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.3em;
+}
+
+.reveal section.slide.level1 h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background: $terracotta;
+}
+
+// Lists
+.reveal ul,
+.reveal ol {
+  margin-left: 0.4em;
+}
+.reveal li {
+  margin: 0.35em 0;
+}
+.reveal ul li::marker {
+  color: $terracotta;
+}
+.reveal ol li::marker {
+  color: $terracotta;
+  font-weight: 600;
+  font-family: $font-family-serif;
+}
+
+// Tables
+.reveal table {
+  font-size: 0.85em;
+  border-collapse: collapse;
+  margin: 0.5em 0;
+}
+.reveal table th {
+  background: $ink;
+  color: $cream;
+  font-family: $font-family-sans-serif;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.5em 0.8em;
+  border: none;
+}
+.reveal table td {
+  padding: 0.4em 0.8em;
+  border-bottom: 1px solid rgba($ink, 0.1);
+}
+.reveal table tr:nth-child(even) td {
+  background: rgba($cream-deep, 0.4);
+}
+
+// Code (inline + block)
+.reveal code {
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  background: rgba($ink, 0.06);
+  color: $terracotta-d;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.reveal pre {
+  background: $cream-deep;
+  border-left: 4px solid $terracotta;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  box-shadow: 0 1px 0 rgba($ink, 0.05);
+  font-size: 0.78em;
+}
+.reveal pre code {
+  background: transparent;
+  color: $ink;
+  padding: 0;
+}
+
+// Callouts (tip / warning / important)
+.reveal .callout {
+  margin: 0.8em 0;
+  border-radius: 6px;
+  border: none;
+  background: rgba($cream-deep, 0.6);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba($ink, 0.06);
+}
+.reveal .callout-header {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  padding: 0.5em 0.9em;
+  color: $cream;
+}
+.reveal .callout-body-container {
+  padding: 0.7em 0.9em;
+}
+
+.reveal .callout.callout-style-default {
+  border-left: 4px solid $steel;
+}
+.reveal .callout-tip,
+.reveal .callout.callout-style-default.callout-tip {
+  border-left-color: $terracotta;
+}
+.reveal .callout-tip .callout-header { background: $terracotta; }
+
+.reveal .callout-warning .callout-header { background: #C58A2E; }
+.reveal .callout-warning { border-left-color: #C58A2E; }
+
+.reveal .callout-important .callout-header { background: $terracotta-d; }
+.reveal .callout-important { border-left-color: $terracotta-d; }
+
+.reveal .callout-note .callout-header { background: $steel; }
+.reveal .callout-note { border-left-color: $steel; }
+
+// Asides
+.reveal .aside,
+.reveal aside,
+.reveal .aside-footnotes {
+  font-size: 0.7em;
+  color: $muted;
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba($ink, 0.1);
+}
+
+// Columns
+.reveal .columns {
+  gap: 1em;
+}
+
+// Slide numbering
+.reveal .slide-number {
+  background: transparent;
+  color: $muted;
+  font-family: $font-family-sans-serif;
+  font-size: 0.55em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+// Progress bar
+.reveal .progress {
+  color: $terracotta;
+  height: 4px;
+}
+
+// Footer
+.reveal .footer {
+  color: $muted;
+  font-family: $font-family-sans-serif;
+  font-size: 0.55em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+// Images: subtle shadow on big embedded images
+.reveal .slide img {
+  box-shadow: 0 4px 16px rgba($ink, 0.15);
+  border-radius: 4px;
+}
+
+// Checklist (task list) appearance
+.reveal ul.task-list {
+  list-style: none;
+  padding-left: 0.5em;
+}
+.reveal ul.task-list li {
+  position: relative;
+  padding-left: 1.6em;
+}
+.reveal ul.task-list input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  accent-color: $terracotta;
+  transform: scale(1.1);
+}
+
+// "Smaller" slides modifier
+.reveal .smaller {
+  font-size: 0.85em;
+}
+
+// Fragment animation polish
+.reveal .fragment.fade-in {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+// Workshop timer (bottom-left overlay)
+#workshop-timer {
+  position: fixed;
+  bottom: 14px;
+  left: 18px;
+  background: rgba($ink, 0.88);
+  color: $cream;
+  padding: 0.35em 0.85em;
+  border-radius: 4px;
+  font-family: $font-family-monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  z-index: 1000;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba($ink, 0.25);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+#workshop-timer:hover {
+  background: $ink;
+}
+#workshop-timer #timer-elapsed {
+  font-weight: 600;
+  color: $cream;
+}
+#workshop-timer #timer-target {
+  color: rgba($cream, 0.55);
+  font-weight: 400;
+}
+#workshop-timer.amber {
+  background: rgba(#C58A2E, 0.92);
+}
+#workshop-timer.red {
+  background: rgba($terracotta-d, 0.95);
+}
+#workshop-timer.red #timer-elapsed,
+#workshop-timer.amber #timer-elapsed {
+  color: $cream;
+}
+
+// Hide timer when printing (PDF export)
+@media print {
+  #workshop-timer { display: none; }
+}
