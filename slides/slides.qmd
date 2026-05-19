@@ -190,9 +190,14 @@ That is the entire loop. Everything else is a variation.
 ## The "username/username" trick
 
 ::: {.callout-tip title="The one piece of magic"}
-If you create a repository whose name is **exactly your GitHub username**, the `README.md` inside it appears automatically at the top of your profile page.
+GitHub displays a repository's `README.md` at the top of your profile page when **all four** of these are true:
 
-Example: GitHub user `aallorant` creates a repo called `aallorant`. The README in that repo renders at <https://github.com/aallorant>.
+- the repository name **matches your GitHub username exactly**
+- the repository is **public**
+- it contains a file named **`README.md`** at the root
+- the `README.md` **has content**
+
+Example: GitHub user `aallorant` creates a public repo called `aallorant` with a `README.md`. The README renders at <https://github.com/aallorant>.
 :::
 
 No website. No hosting. No extra steps.
@@ -201,13 +206,17 @@ No website. No hosting. No extra steps.
 
 In GitHub Desktop:
 
-1. **File → New repository**. Name it exactly your GitHub username. Tick "initialize with a README".
-2. **Publish** to GitHub. Make it **public**.
+1. **File → New repository**. Name it exactly your GitHub username. Tick "initialize with a README". Make it **public**.
+2. **Publish** to GitHub.
 3. Open `README.md` in any text editor.
 4. Use `templates/profile-readme-template.md` from the workshop repo as a starting point.
 5. Fill in: who you are, what you research, links to your work, contact.
 6. **Commit** ("draft profile README") and **push**.
 7. Visit `github.com/your-username` in a browser. See it rendered.
+
+::: aside
+You can also create the repo directly on **github.com**: top-right `+` → **New repository**, name it your username, tick **Add a README**, select **Public**, then **Create repository**. Edit the README in place via the pencil icon. If the README does not appear on your profile within a few minutes, give it 10 to 20 more; brand-new profile repos are sometimes slow to be picked up.
+:::
 
 ## Markdown crash course
 
