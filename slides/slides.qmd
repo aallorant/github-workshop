@@ -42,7 +42,7 @@ Both linkable from your CV.
 
 ## End state, concretely
 
-Two outputs. Both public. Both yours.
+Two outputs.
 
 ::: {.columns}
 ::: {.column width="50%"}
