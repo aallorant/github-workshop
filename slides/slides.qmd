@@ -63,7 +63,7 @@ Title, summary, key figure, file structure, citation, contact. One screen.
 
 ## Why bother?
 
-Three audiences. Each gives a reason.
+Four audiences. Each gives a reason.
 
 . . .
 
@@ -72,6 +72,10 @@ Three audiences. Each gives a reason.
 . . .
 
 - **Your supervisor, examiner, or collaborator**. Increasingly normal to be asked: "can I see the code?"
+
+. . .
+
+- **Journals**. Increasingly ask for public code, or at least pseudo-code, to reproduce your analyses before publication.
 
 . . .
 
