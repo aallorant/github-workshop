@@ -96,7 +96,7 @@ We **are** going to give you a viable starter pattern. You can extend it later.
 
 ## A polished profile
 
-![](images/aallorant-profile.png){width="85%" fig-align="center"}
+![](images/aallorant-profile.png){width="70%" fig-align="center"}
 
 ::: aside
 Source: <https://github.com/aallorant>. This profile was built using exactly the steps in this workshop.
@@ -104,7 +104,7 @@ Source: <https://github.com/aallorant>. This profile was built using exactly the
 
 ## A polished project README
 
-![](images/hiv-ineq.png){width="85%" fig-align="center"}
+![](images/hiv-ineq.png){width="70%" fig-align="center"}
 
 ::: aside
 Source: <https://github.com/aallorant/sae_facility_surveys>. This is the model for hands-on 3.
