@@ -404,4 +404,5 @@ For future questions:
 
 - Office: **2/4077**
 - Email: [adrien.allorant@soton.ac.uk](mailto:adrien.allorant@soton.ac.uk)
+- Workshop materials: [github.com/aallorant/github-workshop](https://github.com/aallorant/github-workshop)
 
