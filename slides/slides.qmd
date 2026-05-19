@@ -1,6 +1,6 @@
 ---
 title: "Organising and sharing your research code"
-subtitle: "A starter pattern with GitHub Desktop"
+subtitle: "A starter pack with GitHub Desktop"
 author: "Adrien Allorant"
 institute: "Department of Social Statistics and Demography, University of Southampton"
 date: today
@@ -35,31 +35,27 @@ execute:
 
 By the end of this session:
 
-1. A **GitHub profile** with a short personal README — your "academic landing page".
+1. A **GitHub profile** with a short personal README, your "academic landing page".
 2. **One of your current projects** organised as a public repo with a clear README, one figure, and a short description.
 
 Both linkable from your CV.
 
-::: aside
-This is not a software engineering bootcamp. It is a starter pattern you can use this week.
-:::
-
 ## End state, concretely
 
-Two artefacts. Both public. Both yours.
+Two outputs. Both public. Both yours.
 
 ::: {.columns}
 ::: {.column width="50%"}
 **Profile**
 
-<https://github.com/athowes>
+<https://github.com/aallorant>
 
 A short bio, links, pinned repositories. Renders automatically from a special repo.
 :::
 ::: {.column width="50%"}
 **Project**
 
-<https://github.com/athowes/multi-agyw>
+<https://github.com/aallorant/sae_facility_surveys>
 
 Title, summary, key figure, file structure, citation, contact. One screen.
 :::
@@ -79,7 +75,7 @@ Three audiences. Each gives a reason.
 
 . . .
 
-- **Your career**. A public repo with a clean README is a free, durable artefact. It shows up when people search your name.
+- **Your career**. A public repo with a clean README is a free, durable output. It shows up when people search your name.
 
 ## What this workshop is not
 
@@ -96,18 +92,18 @@ We **are** going to give you a viable starter pattern. You can extend it later.
 
 ## A polished profile
 
-![](images/athowes-profile.png){.r-stretch fig-align="center"}
+![](images/aallorant-profile.png){width="85%" fig-align="center"}
 
 ::: aside
-Source: <https://github.com/athowes>. We are using this as the aspirational example.
+Source: <https://github.com/aallorant>. This profile was built using exactly the steps in this workshop.
 :::
 
 ## A polished project README
 
-![](images/multi-agyw-readme.png){.r-stretch fig-align="center"}
+![](images/hiv-ineq.png){width="85%" fig-align="center"}
 
 ::: aside
-Source: <https://github.com/athowes/multi-agyw>. This is the model for hands-on 3.
+Source: <https://github.com/aallorant/sae_facility_surveys>. This is the model for hands-on 3.
 :::
 
 ## Anatomy of a good project README
@@ -116,12 +112,10 @@ A single page covering:
 
 1. **Title** + one-line description
 2. **Summary**: what is the question, method, finding (2–4 sentences)
-3. **One figure** — usually the key result
+3. **One figure**, usually the key result
 4. **File structure**: where to find what
 5. **Reproducibility notes**: software versions, data sources
 6. **Citation + contact + licence**
-
-That is it. Aim for one screen.
 
 # GitHub Desktop: mental model {.section}
 
@@ -167,7 +161,7 @@ In English:
 
 ## What GitHub Desktop looks like
 
-![](images/github-desktop-screenshot.png){.r-stretch fig-align="center"}
+![](images/github-desktop-screenshot.png){width="65%" fig-align="center"}
 
 ::: aside
 Tour: changed files on the left, diff on the right, commit box at the bottom, push button top-right.
@@ -183,8 +177,6 @@ Five clicks to learn:
 4. Click **Publish repository** to push to github.com.
 5. View it in your browser.
 
-That is the entire loop. Everything else is a variation.
-
 # Hands-on 1: profile README {.section}
 
 ## The "username/username" trick
@@ -199,8 +191,6 @@ GitHub displays a repository's `README.md` at the top of your profile page when 
 
 Example: GitHub user `aallorant` creates a public repo called `aallorant` with a `README.md`. The README renders at <https://github.com/aallorant>.
 :::
-
-No website. No hosting. No extra steps.
 
 ## Your task (15 minutes) {.smaller}
 
@@ -232,6 +222,15 @@ You can also create the repo directly on **github.com**: top-right `+` → **New
 | `- bullet` | bullet list |
 
 That is 90% of what you need.
+
+## Quick share (3 minutes)
+
+Once your profile renders, turn to a neighbour.
+
+- Show each other your profile page.
+- Pick one thing in theirs you might steal for yours.
+
+Make a note; you can update your README later.
 
 ## Checklist before moving on
 
@@ -290,8 +289,7 @@ projects/
 `../data/` means the data folder one level up from where this script lives.
 :::
 
-- Git cannot see what is not in the repo. Geography is your strongest protection.
-- Gitignore is the safety net, not the primary defence.
+- Git cannot see what is not in the repo.
 - For non-sensitive derived data you want to share for reproducibility: keep it inside the repo and do not gitignore it.
 
 # Hands-on 3: project README {.section}
@@ -301,10 +299,6 @@ projects/
 If a stranger landed on your project repo, what would they need to see in one page to understand your work?
 
 Jot down 4–6 bullet points. No writing yet.
-
-::: aside
-Resist the urge to start typing markdown. Just think.
-:::
 
 ## Pair / share (4 min)
 
@@ -348,7 +342,7 @@ In your project repo:
 | --- | --- |
 | Code | **MIT** (permissive, simple) or **GPL-3.0** (copyleft) |
 | Non-code (slides, text, figures) | **CC-BY-4.0** (attribution required) |
-| Nothing | All rights reserved by default — others legally cannot reuse your work |
+| Nothing | All rights reserved by default; others legally cannot reuse your work |
 
 Just add a `LICENSE` file. GitHub has a one-click tool: **Add file → Create new file → name it `LICENSE` → "Choose a license template"**.
 
@@ -367,11 +361,11 @@ If you accidentally commit something sensitive: stop, do not push, ask for help.
 
 ## What we did not cover (and where to go next)
 
-- **Branches and pull requests** — for collaboration. [GitHub Docs: branches](https://docs.github.com/en/pull-requests).
-- **GitHub Pages** — host a project site with a custom URL. [pages.github.com](https://pages.github.com).
-- **Zenodo + GitHub releases** — get a citable DOI for your code. [guides.github.com/activities/citable-code](https://guides.github.com/activities/citable-code/).
-- **Issues** — a personal todo list, attached to the project.
-- **GitHub Education** — free private repos and other perks if you sign up with your `.ac.uk` email. [education.github.com](https://education.github.com).
+- **Branches and pull requests**, for collaboration: [GitHub Docs: branches](https://docs.github.com/en/pull-requests).
+- **GitHub Pages**, host a project site with a custom URL: [pages.github.com](https://pages.github.com).
+- **Zenodo + GitHub releases**, get a citable DOI for your code: [guides.github.com/activities/citable-code](https://guides.github.com/activities/citable-code/).
+- **Issues**, a personal todo list attached to the project.
+- **GitHub Education**, free private repos and other perks if you sign up with your `.ac.uk` email: [education.github.com](https://education.github.com).
 
 ## Final checklist
 
@@ -387,9 +381,10 @@ You should now have:
 **This week**: add the profile URL to your CV. Make one more repo public. Or just leave it. You have done the hard part.
 :::
 
-## Questions
+## Questions?
 
-Open floor.
+For future questions:
 
-If we are done early, stay and work on your repos. I am here.
+- Office: **2/4077**
+- Email: [adrien.allorant@soton.ac.uk](mailto:adrien.allorant@soton.ac.uk)
 
