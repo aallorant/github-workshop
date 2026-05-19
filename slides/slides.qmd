@@ -168,7 +168,7 @@ In English:
 ![](images/github-desktop-screenshot.png){width="65%" fig-align="center"}
 
 ::: aside
-Tour: changed files on the left, diff on the right, commit box at the bottom, push button top-right.
+Tour: changed files on the left, diff on the right, commit box at the bottom, push button top-right. Same layout on macOS and Windows; the **File** menu lives in the top OS menu bar on Mac and inside the GitHub Desktop window on Windows.
 :::
 
 ## A 30-second demo
@@ -194,6 +194,19 @@ GitHub displays a repository's `README.md` at the top of your profile page when 
 - the `README.md` **has content**
 
 Example: GitHub user `aallorant` creates a public repo called `aallorant` with a `README.md`. The README renders at <https://github.com/aallorant>.
+:::
+
+## Set up first (5 minutes, only if needed)
+
+If you have not done this in the past, sort it now before the README task:
+
+- A **GitHub account**: [github.com](https://github.com); use your `.ac.uk` email to be eligible for [GitHub Education](https://education.github.com) benefits.
+- **GitHub Desktop**: [desktop.github.com](https://desktop.github.com) (the page auto-detects whether you are on macOS or Windows), then sign in with the account you just created.
+
+If both are already done, skip straight to the task on the next slide.
+
+::: aside
+The next 15 minutes include this setup time; budget 5 minutes maximum here, then move on. If installation fails, ask a neighbour or me; do not wait silently.
 :::
 
 ## Your task (15 minutes) {.smaller}
