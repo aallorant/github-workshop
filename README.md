@@ -1,6 +1,6 @@
 # Organising and sharing your research code
 
-A 90-minute hands-on workshop for doctoral students. Led by Adrien Allorant, Department of Social Statistics and Demography, University of Southampton.
+A 90-minute hands-on workshop for doctoral students.
 
 ▶ **[Open the slides](https://aallorant.github.io/github-workshop/slides/slides.html)** · [source `.qmd`](slides/slides.qmd) · [profile template](templates/profile-readme-template.md) · [project template](templates/project-readme-template.md)
 
