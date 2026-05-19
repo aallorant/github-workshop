@@ -268,20 +268,31 @@ Always:
 
 GitHub Desktop has built-in templates (`Repository → Repository settings → Ignored files`). Pick R, Python, or both.
 
-## Folder structure that ages well
+## Where to put your data {.smaller}
+
+The safest pattern: data outside the repo folder.
 
 ```
-your-project/
-├── data/          ← raw inputs (often gitignored)
-├── code/          ← scripts, in run order
-├── output/        ← figures, tables, model outputs
-├── docs/          ← methods notes, supplementary
-├── README.md      ← the front door
-├── .gitignore     ← what Git should ignore
-└── LICENSE        ← reuse terms (add later)
+projects/
+├── data/                       ← sensitive data here
+│   └── dhs-mozambique.dta
+│
+└── hiv-trends-analysis/        ← the repo
+    ├── .git/
+    ├── code/
+    │   └── 1_data_prep.R       reads: ../data/dhs-mozambique.dta
+    ├── output/
+    ├── README.md
+    └── .gitignore              also lists: data/ (safety net)
 ```
 
-You do not have to restructure your project now. Just know the pattern.
+::: aside
+`../data/` means the data folder one level up from where this script lives.
+:::
+
+- Git cannot see what is not in the repo. Geography is your strongest protection.
+- Gitignore is the safety net, not the primary defence.
+- For non-sensitive derived data you want to share for reproducibility: keep it inside the repo and do not gitignore it.
 
 # Hands-on 3: project README {.section}
 
