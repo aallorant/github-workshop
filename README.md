@@ -2,6 +2,8 @@
 
 A 90-minute hands-on workshop for doctoral students. Led by Adrien Allorant, Department of Social Statistics and Demography, University of Southampton.
 
+▶ **[Open the slides](https://aallorant.github.io/github-workshop/slides/slides.html)** · [source `.qmd`](slides/slides.qmd) · [profile template](templates/profile-readme-template.md) · [project template](templates/project-readme-template.md)
+
 ## By the end, you will have
 
 1. A **GitHub profile** with a short personal README, suitable to put on your CV.
